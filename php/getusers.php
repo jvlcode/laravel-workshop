@@ -18,6 +18,7 @@ $sql = "SELECT * FROM users";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
+    echo "<h1>User List</h1>";
     echo "<table border=1>";
     echo "<th>ID</th><th>Name</th><th>Email</th>";
     while($row = $result->fetch_assoc()) {
