@@ -1,0 +1,8 @@
+1. no url support - danger of exposing filename
+2. db - function - view all code in one place / difficulty in managing
+3. writing SQL queries 
+4. no db security on inserting data.
+5  no site security when submiting form
+
+7. validation logic
+8. difficulty in rending view code

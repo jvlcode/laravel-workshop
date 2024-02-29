@@ -8,6 +8,9 @@
 4. write db connect logic - handle conn error - 
 5. assign values to insert
 6. write query to insert and execute
+7. show success message
+
+CONS OF PHP
 
 
 
@@ -35,7 +38,6 @@
 10. Create StudentController and Load view "student-form" from StudentController::viewForm
         php artisan make:controller StudentController
 
-11. Create View  "student-list" and Load view to route /student-list from StudentController::viewList
 
 -- SUBMIT STUDENT FORM --
 12. add addStudent in studentcontroller and add route /add-student
@@ -54,13 +56,14 @@ PPT:
 
 16. add columns in migration file
             $table->string('name');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->string('phone')->nullable();
             $table->text('address');
             $table->enum('gender',['Male','Female','Other']);
             $table->string('department');
             $table->boolean('parttime')->default(false);
             $table->date('joined_date');
+    NOTE: email is unique
 
 17. Run migration 
         php artisan migrate
@@ -85,9 +88,15 @@ PPT:
 
 -- STUDENT LIST --
 
-22. add the viewList in StudentController return student-list view 
-       add uri "student-list" in student-form page
+22. add logic viewForm in StudentController 
 23. get the students data and pass it to view
-24. loop the data in view
+24. loop the data in view with ul list 
+
+
+-- ADDITIONAL --
+1. review null insert of name field causes SQL error (php|laravel)
+2. solution by adding validation
+2. simulate the duplicate insert of email in php and SQL error (php|laravel)
+3. simulate same in laravel and fix it with email unique validation
 
 [OPTIONAL]. Create master layout and sections in student-form and student-list views
