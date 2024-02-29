@@ -6,25 +6,20 @@ Create a new database for your Laravel application.
 Step 2: Laravel Installation
 Install Laravel using Composer:
 
-
-
 composer create-project laravel/laravel student-reg
+
 Step 3: Database Configuration
 Configure your database connection in the .env file.
 
 Step 4: Create Student Model and Migration
 Generate a Student model and migration to represent the students table:
 
-
-
 php artisan make:model Student -m
 Open the migration file (database/migrations/YYYY_MM_DD_create_students_table.php) and define the students table schema with additional fields.
 
 Run the migration:
-
-
-
 php artisan migrate
+
 Step 5: Update Student Model
 Open the Student model (app/Models/Student.php) and update the $fillable array to include the new fields.
 
