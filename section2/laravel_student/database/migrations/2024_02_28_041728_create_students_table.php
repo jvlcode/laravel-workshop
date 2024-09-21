@@ -20,7 +20,7 @@ return new class extends Migration
             $table->enum('gender',['Male','Female','Other']);
             $table->string('department');
             $table->boolean('parttime')->default(false);
-            $table->date('joined_date');
+            $table->date('joining_date');
             $table->timestamps();
         });
     }
