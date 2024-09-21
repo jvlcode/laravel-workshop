@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
 $username = "root";
-$password = "";
-$database = "php_student_registration";
+$password = "test@123";
+$database = "php_student_reg";
 
 $conn = new mysqli($host, $username, $password, $database);
 

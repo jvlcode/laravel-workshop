@@ -9,7 +9,7 @@ class StudentController extends Controller
 {
     public function viewForm() {
         $students = Student::all();
-        return view('student-form',['students'=>$students]);
+        return view('form',['students'=>$students]);
     }
     public function storeData(Request $request) {
         $request->validate([
