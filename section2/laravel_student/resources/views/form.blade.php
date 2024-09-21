@@ -75,7 +75,7 @@
             </div>
             <div class="col-6">
                 <h3>Registered Students</h3>
-                @if($students)
+                @if(isset($students))
                 <ul class="list-group">
                     @foreach($students as $student)
                     <li class="list-group-item">{{$student->name}} - {{$student->email}} - {{$student->joined_date}}</li>
